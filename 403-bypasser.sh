@@ -1,8 +1,14 @@
 #!/usr/bin/bash
 figlet "403-bypasser"
 echo "          By 0xmicro          "
-echo "./403-bypasser.sh https://example.com path"
 echo " "
+if [ $# == 0 ]
+then
+echo "Please enter the arguments"
+echo "ex:"
+echo "./403-bypasser.sh https://example.com path"
+exit
+fi
 data=$(curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/$2)
 echo "[+] $data ${1}/${2}"
 IFS=$'\n'
