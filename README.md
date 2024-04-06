@@ -9,7 +9,7 @@
 `./403-bypasser.sh https://example.com path`
 
 ## Installation
-* `git clone https://github.com/Micro-8/403-bypasser.git`
+* `git clone https://github.com/0xmicr0/403-bypasser.git`
 * `cd 403-bypasser`
 * `chmod +x 403-bypasser`
 * `sudo apt install figlet`  - If you are unable to see the logo as in the screenshot
