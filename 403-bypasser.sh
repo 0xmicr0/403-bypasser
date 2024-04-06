@@ -72,6 +72,8 @@ bypass_403_4(){
     echo "[+] $data $1/$2 -e 127.0.0.1 "
     data=$(curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" -e "$1" $1/$2)
     echo "[+] $data $1/$2 -e $1 "
+    echo "Way back machine:"
+    curl -s  https://archive.org/wayback/available?url=$1/$2 | jq -r '.archived_snapshots.closest | {available, url}'
 }
 
 bypass_403_1 $1 $2 headers.txt &
