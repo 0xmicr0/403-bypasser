@@ -6,7 +6,7 @@
 - I use in this script 6 different techniques
 
 ## Basic usage
-./403-bypasser.sh https://example.com path
+`./403-bypasser.sh https://example.com path`
 
 ## Installation
 * `git clone https://github.com/Micro-8/403-bypasser.git`
